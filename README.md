@@ -10,9 +10,11 @@
 ## 1. Introducción al problema
 El cliente pide una aplicación donde se pueda manejar la gestión de un hotel, esto incluye: gestionar habitaciones libres, reservas, incidencias de esta, empleados y clientes.
 
+
+
 Los usuarios de este proyecto será la dirección del hotel, empleados y clientes que hacen la reserva.
 
-Los clientes serán las personas que hacen la reserva.
+Los clientes serán las personas que hacen la reserva y que, además, podrán dejar una valoración sobre su estancia en el hotel, que la gestión podra ver.
 
 Debido al reciente exito del hotel, la dirección ha decidido digitalizar el proceso de reserva y gestión de habitaciones, junto a la gestión de empleados.
 

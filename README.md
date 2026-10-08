@@ -28,6 +28,7 @@ Nuestras expectativas de cara al fin del proyecto es haber logrado la creación 
 
 ### 3.1. Requisitos generales
 
+
 ### 3.2. Usuarios del sistema
 
 ## 4. Catálogo de requisitos

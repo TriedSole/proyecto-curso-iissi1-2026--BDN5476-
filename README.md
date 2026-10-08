@@ -20,9 +20,6 @@ Debido al reciente exito del hotel, la dirección ha decidido digitalizar el pro
 
 Nuestras expectativas de cara al fin del proyecto es haber logrado la creación de una aplicación que sea efectiva a la hora de administrar el hotel.
 
-
-.
-
 ## 2. Glosario de términos
 
 - Términos específicos del dominio del problema, ordenados alfabéticamente. Se valorará la presencia de información multimedia.

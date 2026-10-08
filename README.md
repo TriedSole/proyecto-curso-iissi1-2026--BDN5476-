@@ -33,7 +33,9 @@ RG2: La dirección del hotel debe poder ver las habitaciones con incidencias y s
 
 RG3: Los clientes y administradores pueden ver las valoraciones de las habitaciones y servicios.
 
-RG4: Los empleados del hotel deben poder consultar las incidencias, su orden de prioridad y una vez empezada su resolución indicar si estan en proceso (o si han finalizado si resulta que la incidencia era fácil de resolver o de corta duración)
+RG4: Los empleados del hotel deben poder consultar las incidencias, su orden de prioridad y el estado en el que se encuentran y añadir nuevas
+
+RG5: Empleados y clientes pueden acceder a sus datos personales, la dirección a los de todos los usuarios del sistema
 
 ### 3.2. Usuarios del sistema
 

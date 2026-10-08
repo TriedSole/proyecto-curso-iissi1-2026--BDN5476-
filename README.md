@@ -27,17 +27,13 @@ Nuestras expectativas de cara al fin del proyecto es haber logrado la creación 
 ## 3. Visión general del sistema
 
 ### 3.1. Requisitos generales
-RG1: Reserva de habitaciones
-Como cliente,
-quiero ver que habitaciones hay disponibles, 
-para poder hacer una reserva
+RG1:El cliente debe poder revisar sus reservas, consultar la fecha, hora de entrada, hora de salida, tipo de habitación,servicios incluidos y coste total.
 
-RG2: Gestión de incidencias
-Como gerente,
-quiero ver que habitaciones tienen incidencias,
-para poder ordenar su resolución
+RG2: La dirección del hotel debe poder ver las habitaciones con incidencias y si se han resuelto o están en curso y las reservas asignadas a esa habitación.
 
-RG3: 
+RG3: Los clientes y administradores pueden ver las valoraciones de las habitaciones y servicios.
+
+RG4: Los empleados del hotel deben poder consultar las incidencias, su orden de prioridad y una vez empezada su resolución indicar si estan en proceso (o si han finalizado si resulta que la incidencia era fácil de resolver o de corta duración)
 
 ### 3.2. Usuarios del sistema
 

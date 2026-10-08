@@ -27,7 +27,17 @@ Nuestras expectativas de cara al fin del proyecto es haber logrado la creación 
 ## 3. Visión general del sistema
 
 ### 3.1. Requisitos generales
+RG1: Reserva de habitaciones
+Como cliente,
+quiero ver que habitaciones hay disponibles, 
+para poder hacer una reserva
 
+RG2: Gestión de incidencias
+Como gerente,
+quiero ver que habitaciones tienen incidencias,
+para poder ordenar su resolución
+
+RG3: 
 
 ### 3.2. Usuarios del sistema
 

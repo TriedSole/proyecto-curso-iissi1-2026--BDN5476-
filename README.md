@@ -1,4 +1,4 @@
-# Título Proyecto
+# GESTIÓN HOTELERA
 
 ## Miembros del grupo LX-XXX-X (sustituir)
 

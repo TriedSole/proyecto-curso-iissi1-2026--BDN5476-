@@ -3,9 +3,9 @@
 ## Miembros del grupo LX-XXX-X (sustituir)
 
 1. Romero Moreno, Iván
-1. Apellidos, Nombre
-1. Apellidos, Nombre
-1. Apellidos, Nombre
+1. Arjona Montaño, Antonio Javier
+1. García Galán, Jairo
+1. Moreno Ureba, Ernesto
 
 ## 1. Introducción al problema
 

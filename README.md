@@ -1,6 +1,6 @@
 # GESTIÓN HOTELERA
 
-## Miembros del grupo LX-XXX-X (sustituir)
+## Miembros del grupo L3-ABS-4
 
 1. Romero Moreno, Iván
 1. Arjona Montaño, Antonio Javier

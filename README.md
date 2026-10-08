@@ -8,13 +8,18 @@
 1. Moreno Ureba, Ernesto
 
 ## 1. Introducción al problema
-El cliente pide una aplicación donde se pueda manejar la gestión de un hotel, esto incluye: gestionar habitaciones libres, reservas, empleados y clientes.
-Los usuarios de este proyecto será la dirección del hotel, empleados y clientes que hacen la reserva. Los clientes serán las personas que hacen la reserva.
+El cliente pide una aplicación donde se pueda manejar la gestión de un hotel, esto incluye: gestionar habitaciones libres, reservas, incidencias de esta, empleados y clientes.
+
+Los usuarios de este proyecto será la dirección del hotel, empleados y clientes que hacen la reserva.
+
+Los clientes serán las personas que hacen la reserva.
+
 Debido al reciente exito del hotel, la dirección ha decidido digitalizar el proceso de reserva y gestión de habitaciones, junto a la gestión de empleados.
+
 Nuestras expectativas de cara al fin del proyecto es haber logrado la creación de una aplicación que sea efectiva a la hora de administrar el hotel.
 
 
-- Descripción del problema para poner en contexto el proyecto, incluyendo información sobre los clientes y usuarios, la situación actual, problemas, expectativas, etc. Se valorará la presencia de información multimedia (fotos, gráficos, documentos escaneados, etc.).
+.
 
 ## 2. Glosario de términos
 

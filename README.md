@@ -123,9 +123,36 @@ para [razón]
 
 #### 4.1.2. Reglas de negocio
 
-##### R.N.01. Título regla negocio
+##### R.N.01. Fechas de una reserva
+La fecha de salida de una reserva deberá ser posterior a la fecha de entrada.
 
-Descripción de la regla de negocio.
+##### R.N.02. Solapamiento de reservas
+Una misma habitación no podrá estar asignada a dos reservas cuyos periodos de estancia se solapen.
+
+##### R.N.03. Capacidad de la habitación
+El número de huéspedes de una reserva no podrá superar la capacidad máxima de la habitación.
+
+##### R.N.04. Estado de la habitación
+Una habitación que se encuentre en mantenimiento no podrá ser asignada a una nueva reserva.
+
+##### R.N.05. Valoración de una reserva
+Una reserva podrá tener como máximo una valoración por cliente.
+
+##### R.N.06. Puntuación de una valoración
+La puntuación de una valoración deberá estar comprendida entre 1 y 5.
+
+##### R.N.07. Valoración de una estancia
+Una valoración solo podrá realizarse cuando la estancia correspondiente haya finalizado.
+
+##### R.N.08. Gestión de incidencias
+Una incidencia solo podrá ser gestionada por un empleado del hotel. Una incidencia podrá permanecer sin empleado asignado mientras esté pendiente.
+
+##### R.N.09. Asignación de incidencias
+Una incidencia que esté en estado resuelta no podrá ser asignada posteriormente a un empleado para su gestión.
+
+##### R.N.10. Incidencias de una habitación en mantenimiento:
+Una habitación que tenga una incidencia no resuelta no podrá estar disponible para nuevas reservas hasta que haya sido resuelta.
+
 
 ### 4.2. Mapa de historias de usuario (opcional)
 

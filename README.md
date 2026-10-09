@@ -22,28 +22,28 @@ Nuestras expectativas de cara al fin del proyecto es haber logrado la creación 
 
 ## 2. Glosario de términos
 
-# Cliente
+### Cliente
 Persona que puede realizar reservas de habitaciones, contratar servicios adicionales y realizar valoraciones sobre su estancia. Un cliente puede ser también empleado del hotel.
 
-# Empleado
+### Empleado
 Persona que trabaja en el hotel y utiliza el sistema para realizar tareas relacionadas con la gestión de reservas, habitaciones, servicios o incidencias. Dependiendo de su puesto, puede desempeñar funciones de limpieza, recepción, mantenimiento, cocina, botones, aparcacoches o gerencia. Un empleado puede ser también cliente.
 
-# Estado de la habitación
+### Estado de la habitación
 Situación en la que se encuentra una habitación en un momento determinado. Por ejemplo, puede estar disponible, ocupada o en mantenimiento.
 
-# Estado de la incidencia
+### Estado de la incidencia
 Situación en la que se encuentra una incidencia registrada en una habitación. Puede encontrarse pendiente, en curso o resuelta.
 
-# Tipo de incidencia
+### Tipo de incidencia
 El por qué de la incidencia. Hemos dividido las incidencias en necesita limpieza, plaga, daño mobiliario, desperfecto electricidad, desperfecto inmueble, problema de fontanería, desaparición de material y otras incidencias.
 
-# Estado de la reserva
+### Estado de la reserva
 Situación en la que se encuentra una reserva. Entre los posibles estados se encuentran pendiente, confirmada, cancelada o finalizada.
 
-# Habitación
+### Habitación
 Unidad de alojamiento del hotel que puede ser reservada por un cliente. Cada habitación dispone de un número, una planta, un tipo, una capacidad y un precio, además de un estado que indica su situación actual.
 
-# Tipo de habitación
+### Tipo de habitación
 Las diferentes habitaciones disponibles para reservar en el hotel:
 - Individual: Habitación que dispone de una cama individual, y un baño.
 - Doble: Habitación que dispone con una cama de matrimonio y un baño.
@@ -52,28 +52,28 @@ Las diferentes habitaciones disponibles para reservar en el hotel:
 - Cuádruple: Habitación con dos literas, dos camas en cada una y un baño.
 - Premium: Habitación con dos camas de matrimonio separadas por una pared, con un baño para cada una. También cuenta con minibar y con acceso prioritario a los servicios del hotel.
   
-# Incidencia
+###Incidencia
 Problema, avería o situación anómala detectada en una habitación que requiere algún tipo de actuación por parte del personal del hotel. Las incidencias pueden tener diferentes niveles de prioridad (baja, media y alta)  y estados de resolución.
 
-# Nacionalidad
+### Nacionalidad
 Nacionalidad de un cliente.
 
-# Número de huéspedes
+### Número de huéspedes
 Cantidad de personas que se alojarán en una reserva determinada. Este valor debe ser compatible con la capacidad de la habitación asignada.
 
-# Puesto
+### Puesto
 Cargo que desempeña un empleado dentro del hotel. En el sistema se contemplan los puestos de limpiador, recepcionista, mantenimiento, cocinero, botones, aparcador de coches y gerente.
 
-# Reserva
+### Reserva
 Registro mediante el cual un cliente solicita y obtiene la asignación de una habitación durante un periodo determinado. Una reserva incluye las fechas de entrada y salida, el número de huéspedes, su estado y el precio total.
 
-# Servicio
+### Servicio
 Prestación adicional ofrecida por el hotel que puede ser contratada por los clientes durante una reserva. Cada servicio tiene un nombre, una descripción y un precio. Algunos ejemplos pueden ser el desayuno, el servicio de habitaciones o el aparcamiento.
 
-# Valoración
+### Valoración
 Opinión que un cliente realiza sobre su experiencia asociada a una reserva. Incluye una puntuación de 1 a 5, un comentario y la fecha en la que se realiza.
 
-# Usuario
+### Usuario
 Persona que dispone de una cuenta en el sistema del hotel. Un usuario puede tener el papel de cliente, de empleado o desempeñar ambos roles simultáneamente. También existe el rol del administrador, el cual tendrá acceso total a cualquier dato.
 
 

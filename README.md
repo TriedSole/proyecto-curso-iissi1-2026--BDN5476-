@@ -98,15 +98,162 @@ RG5: Empleados y clientes pueden acceder a sus datos personales, la dirección a
 
 #### R.F.01. Título requisito funcional
 
-Como [tipo de usuario]
-quiero [servicio]
-para [razón]
+##R.F.01. Consulta de reservas de un cliente
 
-**Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- Se debe aplicar la regla de negocio R.N.XX.
-- ...
+Como cliente,
+
+quiero consultar mis reservas para,
+
+conocer las fechas, la habitación asignada, los servicios contratados y el precio total.
+
+Prueba de aceptación
+
+-Comprobar que se muestran las reservas asociadas al cliente que realiza la consulta.
+
+-Comprobar que cada reserva muestra las fechas de entrada y salida, la habitacion asignada, los servicios contratados y el precio total.
+
+
+##R.F.02. Listado de habitaciones
+
+Como empleado,
+
+quiero consultar el listado de habitaciones del hotel,
+
+para conocer sus características y su estado actual.
+
+Prueba de aceptación
+
+-Comprobar que se muestran las habitaciones registradas en el sistema.
+
+-Comprobar que cada habitación muestra su número, planta, tipo, capacidad, precio y estado.
+
+
+##R.F.03. Consulta de habitaciones disponibles
+
+Como recepcionista,
+
+quiero consultar las habitaciones disponibles para un intervalo de fechas,
+
+para informar a los clientes sobre las opciones de alojamiento.
+
+Prueba de aceptación
+
+-Comprobar que se muestran las habitaciones que no tienen reservas que se solapen con el intervalo consultado.
+
+-Comprobar que no se muestran habitaciones en mantenimiento ni habitaciones afectadas por incidencias sin resolver que impidan su reserva.
+
+-Se deben aplicar las reglas de negocio R.N.02, R.N.04 y R.N.10.
+
+
+##R.F.04. Listado de incidencias
+
+Como empleado,
+
+quiero consultar las incidencias registradas en el hotel,
+
+para conocer los problemas detectados en las habitaciones.
+
+Prueba de aceptación
+
+-Comprobar que se muestran las incidencias registradas en el sistema.
+
+-Comprobar que cada incidencia muestra su fecha, descripción, estado, prioridad y habitación afectada.
+
+
+##R.F.05. Consulta de incidencias pendientes
+
+Como gerente,
+
+quiero consultar las incidencias pendientes y en curso,
+
+para supervisar los problemas que todavía no se han resuelto.
+
+Prueba de aceptación
+
+-Comprobar que se muestran las incidencias cuyo estado es pendiente o en curso.
+
+-Comprobar que las incidencias resueltas no aparecen en los resultados.
+
+
+##R.F.06. Consulta de reservas de una habitación
+
+Como gerente,
+
+quiero consultar las reservas asociadas a una habitación,
+
+para conocer su historial de ocupación.
+
+Prueba de aceptación
+
+-Comprobar que se muestran las reservas asociadas a la habitación seleccionada.
+
+-Comprobar que cada reserva muestra las fechas de entrada y salida, el número de huéspedes y el estado de la reserva.
+
+
+##R.F.07. Listado de servicios
+
+Como cliente,
+
+quiero consultar los servicios ofrecidos por el hotel,
+
+para conocer sus características y precios antes de contratarlos.
+
+Prueba de aceptación
+
+-Comprobar que se muestran los servicios incluidos en el catálogo del hotel.
+
+-Comprobar que cada servicio muestra su nombre, descripción y precio.
+
+
+##R.F.08. Consulta de empleados
+
+Como gerente,
+
+quiero consultar el listado de empleados del hotel,
+
+para conocer su información laboral y el puesto que desempeñan.
+
+Prueba de aceptación
+
+-Comprobar que se muestran los empleados registrados en el sistema.
+
+-Comprobar que se visualizan el NSS, el puesto y el salario de cada empleado.
+
+-Comprobar que solo los usuarios autorizados pueden consultar la información laboral restringida.
+
+
+##R.F.09. Consulta de valoraciones
+
+Como gerente,
+
+quiero consultar las valoraciones realizadas por los clientes,
+
+para conocer su grado de satisfacción con las estancias en el hotel.
+
+Prueba de aceptación
+
+-Comprobar que se muestran las valoraciones registradas, incluyendo puntuación, comentario y fecha.
+
+-Comprobar que cada valoración se puede relacionar con la reserva a la que pertenece.
+
+-Se deben aplicar las reglas de negocio R.N.05, R.N.06 y R.N.07.
+
+
+##R.F.10. Consulta de reservas por fechas
+
+Como recepcionista,
+
+quiero consultar las reservas correspondientes a un intervalo de fechas,
+
+para conocer la actividad prevista del hotel durante ese periodo.
+
+Prueba de aceptación
+
+-Comprobar que se muestran las reservas que coinciden con el intervalo temporal consultado.
+
+-Comprobar que cada resultado muestra las fechas de entrada y salida, el estado de la reserva y la habitación asignada.
+
+-Se debe aplicar la regla de negocio R.N.02.
 
 #### 4.1.1. Requisitos de información
 

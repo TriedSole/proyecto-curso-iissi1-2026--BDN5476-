@@ -52,7 +52,7 @@ Las diferentes habitaciones disponibles para reservar en el hotel:
 - Cuádruple: Habitación con dos literas, dos camas en cada una y un baño.
 - Premium: Habitación con dos camas de matrimonio separadas por una pared, con un baño para cada una. También cuenta con minibar y con acceso prioritario a los servicios del hotel.
   
-###Incidencia
+### Incidencia
 Problema, avería o situación anómala detectada en una habitación que requiere algún tipo de actuación por parte del personal del hotel. Las incidencias pueden tener diferentes niveles de prioridad (baja, media y alta)  y estados de resolución.
 
 ### Nacionalidad

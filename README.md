@@ -116,9 +116,7 @@ Una misma persona podrá ser cliente y empleado simultáneamente, tal como se es
 
 ### 4.1. Requisitos funcionales
 
-#### R.F.01. Título requisito funcional
-
-## R.F.01. Consulta de reservas de un cliente
+#### R.F.01. Consulta de reservas de un cliente
 
 Como cliente,
 
@@ -133,7 +131,7 @@ Prueba de aceptación
 -Comprobar que cada reserva muestra las fechas de entrada y salida, la habitacion asignada, los servicios contratados y el precio total.
 
 
-## R.F.02. Listado de habitaciones
+#### R.F.02. Listado de habitaciones
 
 Como empleado,
 
@@ -148,7 +146,7 @@ Prueba de aceptación
 -Comprobar que cada habitación muestra su número, planta, tipo, capacidad, precio y estado.
 
 
-## R.F.03. Consulta de habitaciones disponibles
+#### R.F.03. Consulta de habitaciones disponibles
 
 Como recepcionista,
 
@@ -165,7 +163,7 @@ Prueba de aceptación
 -Se deben aplicar las reglas de negocio R.N.02, R.N.04 y R.N.10.
 
 
-## R.F.04. Listado de incidencias
+#### R.F.04. Listado de incidencias
 
 Como empleado,
 
@@ -180,7 +178,7 @@ Prueba de aceptación
 -Comprobar que cada incidencia muestra su fecha, descripción, estado, prioridad y habitación afectada.
 
 
-## R.F.05. Consulta de incidencias pendientes
+#### R.F.05. Consulta de incidencias pendientes
 
 Como gerente,
 
@@ -195,7 +193,7 @@ Prueba de aceptación
 -Comprobar que las incidencias resueltas no aparecen en los resultados.
 
 
-## R.F.06. Consulta de reservas de una habitación
+#### R.F.06. Consulta de reservas de una habitación
 
 Como gerente,
 
@@ -210,7 +208,7 @@ Prueba de aceptación
 -Comprobar que cada reserva muestra las fechas de entrada y salida, el número de huéspedes y el estado de la reserva.
 
 
-## R.F.07. Listado de servicios
+#### R.F.07. Listado de servicios
 
 Como cliente,
 
@@ -225,7 +223,7 @@ Prueba de aceptación
 -Comprobar que cada servicio muestra su nombre, descripción y precio.
 
 
-## R.F.08. Consulta de empleados
+#### R.F.08. Consulta de empleados
 
 Como gerente,
 
@@ -242,7 +240,7 @@ Prueba de aceptación
 -Comprobar que solo los usuarios autorizados pueden consultar la información laboral restringida.
 
 
-## R.F.09. Consulta de valoraciones
+#### R.F.09. Consulta de valoraciones
 
 Como gerente,
 
@@ -259,7 +257,7 @@ Prueba de aceptación
 -Se deben aplicar las reglas de negocio R.N.05, R.N.06 y R.N.07.
 
 
-## R.F.10. Consulta de reservas por fechas
+#### R.F.10. Consulta de reservas por fechas
 
 Como recepcionista,
 

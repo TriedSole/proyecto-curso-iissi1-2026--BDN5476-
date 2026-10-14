@@ -444,11 +444,184 @@ Cada habitación tendrá un número que la identifique y que no podrá repetirse
 - Registrar otra habitación con el número 101: se rechaza.
 
 
-### 4.2. Mapa de historias de usuario (opcional)
+### 4.2. Mapa de historias de usuario
+**R.G. 01. Consulta de reservas
+Como usuario,
+quiero poder consultar los datos de mi reserva
+para poder organizar mis estancia mejor
 
-### 4.3. Requisitos no funcionales (opcional)
+**R.G. 02. Consulta de datos de habitaciones
+Como administrador,
+quiero poder consultar que habitaciones estan disponibles
+para poder realizar una correcta organización del hotel
 
-### 4.4. Requisitos no funcionales
+**R.G. 03. Consulta de valoraciones
+Como usuario del sistema
+quiero poder ver las valoraciones de las habitaciones
+para saber que cuales habitaciones son las mejores
+
+**R.G. 04. Consulta de incidencias
+Como empleado
+quiero poder consultar las habitaciones con incidencias y el estado de estas
+para poder solucionarlas lo antes posible
+
+**R.G. 05 Consulta de datos personales
+Como usuario
+quiero consultar mis propios datos personales
+para cambiarlos si es necesario
+
+**R.G. 06 Administración de datos
+Como administrador
+quiero poder consultar los datos de todos los usuarios
+para gestionar reservas de clientes y el trabajo de los empleados
+
+**R.F.01. Consulta de reservas de un cliente
+Como cliente, 
+quiero consultar mis reservas,
+para conocer las fechas, la habitación asignada, los servicios contratados y el precio total
+
+**R.F.02. Listado de habitaciones
+Como empleado con puesto de recepción, limpieza, mantenimiento o gerente, 
+quiero consultar el listado de habitaciones del hotel, 
+para conocer sus características y su estado actual
+
+**R.F.03. Consulta de habitaciones disponibles
+Como empleado con puesto de recepción,
+quiero consultar las habitaciones disponibles para un intervalo de fechas,
+para informar a los clientes sobre las opciones de alojamiento
+
+**R.F.04. Listado de incidencias
+Como empleado con puesto de recepción, limpieza, mantenimiento o gerente, 
+quiero consultar las incidencias registradas en el hotel ordenadas por prioridad,
+para atender primero las más urgentes
+
+**R.F.05. Consulta de incidencias pendientes y en curso
+Como gerente, 
+quiero consultar las incidencias pendientes y en curso, 
+para supervisar los problemas que todavía no se han resuelto
+
+**R.F.06. Consulta de reservas de una habitación
+Como gerente, 
+quiero consultar las reservas asociadas a una habitación, 
+para conocer su historial de ocupación
+
+**R.F.07. Listado de servicios
+Como cliente, 
+quiero consultar los servicios ofrecidos por el hotel, 
+para conocer sus características y precios antes de contratarlos
+
+**R.F.08. Consulta de empleados
+Como gerente, 
+quiero consultar el listado de empleados del hotel, 
+para conocer su información laboral y el puesto que desempeñan
+
+**R.F.09. Consulta de valoraciones
+Como gerente,
+quiero consultar las valoraciones realizadas por los clientes, 
+para conocer su grado de satisfacción con las estancias en el hotel.
+
+**R.F.10. Consulta de reservas por fechas
+Como empleado con puesto de recepción,
+quiero consultar las reservas correspondientes a un intervalo de fechas,
+para conocer la actividad prevista del hotel durante ese periodo
+
+**R.F.11. Consulta de valoraciones por parte de los clientes
+Como cliente, 
+quiero consultar las valoraciones de otras estancias, 
+para conocer la opinión de otros huéspedes antes de reservar
+
+**R.F.12. Consulta de datos personales propios
+Como usuario del sistema, 
+quiero consultar mis datos personales, 
+para comprobar que la información que el hotel tiene de mí es correcta
+
+**R.F.13. Consulta de datos de todos los usuarios
+Como administrador, 
+quiero consultar los datos de todos los usuarios del sistema, 
+para gestionar la información de clientes y empleados
+
+**R.F.14. Consulta de incidencias de una habitación
+Como gerente,
+quiero consultar las incidencias de una habitación concreta, 
+incluidas las resueltas, para conocer su historial de problemas
+
+**R.N.01. Fechas de una reserva
+Como administrador del hotel,
+quiero que la fecha de salida sea siempre posterior a la de entrada
+para un correcto funcionamiento de reservas del hotel
+
+**R.N.02. Solapamiento de reservas
+Como administrador
+quiero que 2 reservas no se solapen
+para evitar que varios clientes ocupen la misma habitación a la vez
+
+**R.N.03. Capacidad de la habitación
+Como administrador
+quiero que el número de personas por reserva sea mayor o igual que uno
+para evitar reservas sin personas
+
+**R.N.04. Estado de la habitación
+Como administrador
+quiero saber el estado de las habitaciones
+para no asignar una que este en mantenimiento
+
+**R.N.05. Valoración de una reserva
+Como administrador
+quiero que solo exista una reseña por reserva
+para evitar reseñas falsas
+
+**R.N.06. Puntuación de una valoración
+Como administrador
+quiero que la puntuacion de la reserva este comprendida entre 1 y 5 con hasta una cifra decimal
+para facilitar la lectura de la puntuacion de la reserva
+
+**R.N.07. Valoración de una estancia
+Como administrador 
+quiero que la valoracion solo este disponible tras la finalización de la reserva
+para evitar que los clientes reserven, hagan una valoración falsa y cancelen la reserva
+
+**R.N.08. Gestión de incidencias
+Como administrador
+quiero que a cada incidencia le corresponda un empleado (o ninguno dependiendo de su estado)
+para agilizar su resolución
+
+**R.N.09. Asignación de incidencias
+Como administrador
+quiero que las incidencias resueltas no se les pueda asignar un empleado
+para evitar que se intente resolver una incidencia inexistente
+
+**R.N.10. Disponibilidad con incidencias sin resolver
+Como administrador
+quiero que una habitación con una incidencia no pueda ser asignada
+para evitar estancias en una habitación en mantenimiento
+
+**R.N.11. Prioridad de una incidencia
+Como administrador
+quiero que solo pueda haber tres tipos de prioridades para las incidencias
+
+**R.N.12. Estados de una reserva
+Como administrador
+quiero que las reservas pendientes pueden pasar a confirmadas y a completadas, de comfirmada a cancelada, de pendiente a cancelada y que de cancelada no pueda pasar a ningún otro estado
+
+**R.N.13. Precio total de una reserva
+Como administrador
+quiero calcular el precio de una habitación dependiendo del número de días de la estancia y los servicios contratados
+
+**R.N.14. Unicidad del NSS
+Como administrador
+quiero que dos empleados no puedan compartir NSS
+para evitar empleados duplicados
+
+**R.N.15. Acceso a la información laboral
+Como administrador
+quiero que los datos de salario y NSS de los empleados sean accesible solo para los administradores
+para la protección de datos
+
+**R.N.16. Número de habitación
+Como administrador
+quiero que el número de las habitaciones sean únicos
+para evitar habitaciones repetidas
+### 4.3. Requisitos no funcionales
 
 **R.N.F. 01. Protección de datos personales**
 Como usuario del sistema

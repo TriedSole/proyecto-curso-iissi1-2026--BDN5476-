@@ -301,19 +301,108 @@ para conocer su historial de problemas.
 **Prueba de aceptación**
 - Comprobar que se muestran todas las incidencias de la habitación seleccionada, con estado pendiente, en curso o resuelta.
 - Comprobar que no se muestran incidencias de otras habitaciones.
+- 
 
 #### 4.1.1. Requisitos de información
 
-##### R.I.01. Título requisito de información
+##### R.I.01. Información de los usuarios
 
-Como [tipo de usuario]
-quiero [servicio]
-para [razón]
+Como administrador,
+quiero almacenar los datos de los usuarios del sistema,
+para poder identificarlos y gestionar sus permisos de acceso.
 
 **Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- ...
+- Comprobar que cada usuario tiene un identificador único.
+- Comprobar que se almacenan sus datos personales.
+- Comprobar que se identifica si el usuario es cliente, empleado, administrador o tiene varios roles compatibles.
+- Comprobar que un usuario puede ser cliente y empleado simultáneamente.
+
+##### R.I.02. Información de los clientes
+
+Como administrador,
+quiero almacenar la información de los clientes,
+para relacionarlos con sus reservas y valoraciones.
+
+**Prueba de aceptación**
+- Comprobar que cada cliente está asociado a un usuario del sistema.
+- Comprobar que se almacena la nacionalidad de cada cliente.
+- Comprobar que un cliente puede realizar varias reservas.
+- Comprobar que un cliente puede estar registrado sin haber realizado ninguna reserva.
+
+##### R.I.03. Información de los empleados
+
+Como gerente,
+quiero almacenar la información laboral de los empleados,
+para conocer sus puestos y gestionar el personal del hotel.
+
+**Prueba de aceptación**
+- Comprobar que cada empleado está asociado a un usuario.
+- Comprobar que se almacena el NSS, puesto de trabajo y salario de cada empleado.
+- Comprobar que no existen dos empleados con el mismo NSS (R.N.14).
+- Comprobar que únicamente el gerente y el administrador pueden consultar el NSS y el salario (R.N.15).
+
+##### R.I.04. Información de las habitaciones
+
+Como empleado de recepción,
+quiero almacenar los datos de las habitaciones,
+para conocer sus características y controlar su disponibilidad.
+
+**Prueba de aceptación**
+- Comprobar que cada habitación tiene un número único (R.N.16).
+- Comprobar que se almacena su planta, tipo, capacidad, precio y estado.
+- Comprobar que el estado de la habitación puede ser disponible, ocupada o en mantenimiento.
+- Comprobar que una habitación puede estar relacionada con varias reservas e incidencias.
+
+##### R.I.05. Información de las reservas
+
+Como empleado de recepción,
+quiero almacenar la información de las reservas,
+para controlar las estancias de los clientes y las habitaciones asignadas.
+
+**Prueba de aceptación**
+- Comprobar que cada reserva tiene un identificador único.
+- Comprobar que se almacenan las fechas de entrada y salida, número de huéspedes, estado y precio total.
+- Comprobar que cada reserva está asociada a un único cliente titular y una habitación.
+- Comprobar que una reserva puede tener varios servicios contratados.
+- Comprobar que se respetan las reglas de fechas, solapamiento y capacidad (R.N.01, R.N.02 y R.N.03).
+
+##### R.I.06. Información de los servicios
+
+Como administrador,
+quiero almacenar los servicios adicionales ofrecidos por el hotel,
+para que los clientes puedan conocerlos y contratarlos.
+
+**Prueba de aceptación**
+- Comprobar que cada servicio tiene un identificador único.
+- Comprobar que se almacena su nombre, descripción y precio.
+- Comprobar que una reserva puede incluir varios servicios y que un servicio puede estar asociado a distintas reservas.
+- Comprobar que los servicios contratados se tienen en cuenta para calcular el precio total de la reserva (R.N.13).
+
+##### R.I.07. Información de las incidencias
+
+Como empleado de mantenimiento,
+quiero almacenar las incidencias de las habitaciones,
+para conocer los problemas y facilitar su resolución.
+
+**Prueba de aceptación**
+- Comprobar que cada incidencia tiene un identificador único.
+- Comprobar que se almacena su fecha, descripción, tipo, prioridad y estado.
+- Comprobar que cada incidencia está asociada a una habitación y que una habitación puede tener varias incidencias.
+- Comprobar que el estado de una incidencia puede ser pendiente, en curso o resuelta.
+- Comprobar que una incidencia pendiente puede estar sin empleado asignado (R.N.08).
+
+##### R.I.08. Información de las valoraciones
+
+Como gerente,
+quiero almacenar las valoraciones realizadas por los clientes,
+para conocer su grado de satisfacción y mejorar los servicios del hotel.
+
+**Prueba de aceptación**
+- Comprobar que cada valoración tiene un identificador único.
+- Comprobar que se almacena la puntuación, comentario y fecha de realización.
+- Comprobar que cada valoración está asociada a una reserva.
+- Comprobar que la puntuación está entre 0 y 5, con un máximo de un decimal (R.N.06).
+- Comprobar que cada reserva finalizada puede tener como máximo una valoración realizada por su titular (R.N.05 y R.N.07).
 
 #### 4.1.2. Reglas de negocio
 

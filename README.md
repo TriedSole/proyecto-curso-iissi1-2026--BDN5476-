@@ -448,10 +448,38 @@ Cada habitación tendrá un número que la identifique y que no podrá repetirse
 
 ### 4.3. Requisitos no funcionales (opcional)
 
-**R.N.F. 01. Título requisito no funcional**
-Como [tipo de usuario]
-quiero [servicio]
-para [razón]
+### 4.4. Requisitos no funcionales
+
+**R.N.F. 01. Protección de datos personales**
+Como usuario del sistema
+quiero que mis datos personales solo puedan ser consultados por mí o por el administrador
+para que mi información personal esté protegida
+
+**R.N.F. 02. Confidencialidad de la información laboral**
+Como empleado del hotel
+quiero que mi NSS y mi salario solo puedan ser consultados por el gerente y el administrador
+para que mi información laboral sea confidencial
+
+**R.N.F. 03. Autenticación**
+Como administrador
+quiero que todo acceso al sistema requiera identificarse con usuario y contraseña
+para que solo las personas autorizadas puedan utilizarlo
+
+**R.N.F. 04. Control de acceso por rol y puesto**
+Como administrador
+quiero que cada usuario solo pueda utilizar las funcionalidades de su rol y, en el caso de los empleados, de su puesto
+para evitar accesos a información que no le corresponde
+
+**R.N.F. 05. Rendimiento**
+Como empleado del hotel
+quiero que las consultas y listados se muestren en menos de 3 segundos
+para poder atender a los clientes sin esperas
+//Se puede quitar si es muy ambiciosa para lo que haremos tecnicamente
+
+**R.N.F. 06. Usabilidad**
+Como empleado del hotel
+quiero poder utilizar el sistema sin formación técnica previa
+para realizar mis tareas desde el primer día
 
 -- fin entregable 1 --
 

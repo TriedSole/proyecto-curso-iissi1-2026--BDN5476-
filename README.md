@@ -560,7 +560,7 @@ Cada habitación tendrá un número que la identifique y que no podrá repetirse
 
 
 ### 4.2. Mapa de historias de usuario
-**R.G. 01. Consulta de reservas
+**R.G. 01. Consulta de reservas**
 Como usuario,
 quiero poder consultar los datos de mi reserva
 para poder organizar mis estancia mejor
@@ -705,7 +705,7 @@ Como administrador
 quiero que las incidencias resueltas no se les pueda asignar un empleado
 para evitar que se intente resolver una incidencia inexistente
 
-**R.N.10. Disponibilidad con incidencias sin resolver
+**R.N.10. Disponibilidad con incidencias sin resolver**
 Como administrador
 quiero que una habitación con una incidencia no pueda ser asignada
 para evitar estancias en una habitación en mantenimiento

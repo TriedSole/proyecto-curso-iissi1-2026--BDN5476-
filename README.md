@@ -1,4 +1,4 @@
-# GESTIÓN HOTELERA
+# GESTIÓN HOTELERA - HOTEL IAJE LAS PRADERAS
 
 ## Miembros del grupo L3-ABS-4
 

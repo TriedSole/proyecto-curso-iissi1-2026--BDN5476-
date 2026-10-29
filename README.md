@@ -331,6 +331,11 @@ para compartir mi opinión sobre mi estancia en el hotel.
 
 #### 4.1.1. Requisitos de información
 
+| Nombre | Edad | Ciudad  |
+|--------|------|---------|
+| Ana    | 28   | Sevilla |
+| Luis   | 34   | Madrid  |
+
 ##### R.I.01. Información de los usuarios
 
 Como administrador,

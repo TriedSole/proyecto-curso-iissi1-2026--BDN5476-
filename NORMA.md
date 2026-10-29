@@ -50,7 +50,7 @@ Incluye el contenido del primer entregable mejorado, añadiendo:
    - Diagramas de clases UML con restricciones.
    - Escenarios de prueba con descripción textual y diagrama de objetos UML.
 6. Matrices de trazabilidad:
-   - Matriz de trazabilidad entre los elementos del modelo conceptual y los requisitos de información y reglas de negocio.
+   - Matriz de trazabilidad entre los elementos del modelo conceptual y los requisitos de información y reglas de negocio y los requisitos funcionales.
 
 **Fecha de entrega:** 4/11/2026 23:59
 

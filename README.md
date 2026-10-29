@@ -785,7 +785,7 @@ para realizar mis tareas desde el primer día
 - Matriz de trazabilidad entre los elementos del modelo conceptual y los requisitos.
 
 | | R.I.01 | R.I.02 | R.I.03 | R.I.04 | R.I.05 | R.I.06 | R.I.07 | R.I.08 |
-|---|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|---|
 | **Entidad:** Usuario | X | X | X | | | | | |
 | **Entidad:** Cliente | X | X | | | X | | | |
 | **Entidad:** Empleado | X | | X | | | | X | |

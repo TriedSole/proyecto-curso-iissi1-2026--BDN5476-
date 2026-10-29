@@ -816,8 +816,52 @@ para realizar mis tareas desde el primer día
 | **Restricción:** RN-15 | | | X | | | | | |
 | **Restricción:** RN-16 | | | | X | | | | |
 
+| | RN-01 | RN-02 | RN-03 | RN-04 | RN-05 | RN-06 | RN-07 | RN-08 | RN-09 | RN-10 | RN-11 | RN-12 | RN-13 | RN-14 | RN-15 | RN-16 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| **Entidad:** Usuario | | | | | | | | | | | | | | | | |
+| **Entidad:** Cliente | | | | | X | | | | | | | | | | | |
+| **Entidad:** Empleado | | | | | | | | X | X | | | | | X | X | |
+| **Entidad:** Habitación | | X | X | X | | | | | | X | | | X | | | X |
+| **Entidad:** Reserva | X | X | X | X | X | | X | | | X | | X | X | | | |
+| **Entidad:** Servicio | | | | | | | | | | | | | X | | | |
+| **Entidad:** Incidencia | | | | | | | | X | X | X | X | | | | | |
+| **Entidad:** Valoración | | | | | X | X | X | | | | | | | | | |
+| **Asociación:** Usuario–Cliente | | | | | | | | | | | | | | | | |
+| **Asociación:** Usuario–Empleado | | | | | | | | | | | | | | | | |
+| **Asociación:** Cliente–Reserva | | | | | X | | | | | | | | | | | |
+| **Asociación:** Reserva–Habitación | | X | X | X | | | | | | X | | | X | | | |
+| **Asociación:** Reserva–Servicio | | | | | | | | | | | | | X | | | |
+| **Asociación:** Habitación–Incidencia | | | | | | | | | | X | | | | | | |
+| **Asociación:** Incidencia–Empleado | | | | | | | | X | X | | | | | | | |
+| **Asociación:** Reserva–Valoración | | | | | X | | X | | | | | | | | | |
+| **R.I.01** | | | | | | | | | | | | | | | | |
+| **R.I.02** | | | | | | | | | | | | | | | | |
+| **R.I.03** | | | | | | | | | | | | | | X | X | |
+| **R.I.04** | | | | X | | | | | | X | | | | | | X |
+| **R.I.05** | X | X | X | | | | | | | | | X | X | | | |
+| **R.I.06** | | | | | | | | | | | | | X | | | |
+| **R.I.07** | | | | | | | | X | X | X | X | | | | | |
+| **R.I.08** | | | | | X | X | X | | | | | | | | | |
 
 
+| | RF-01 | RF-02 | RF-03 | RF-04 | RF-05 | RF-06 | RF-07 | RF-08 | RF-09 | RF-10 | RF-11 | RF-12 | RF-13 | RF-14 | RF-15 | RF-16 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| **Entidad:** Usuario | | | | | | | | | | | | | | | | |
+| **Entidad:** Cliente | | | | | X | | | | | | | | | | | |
+| **Entidad:** Empleado | | | | | | | | X | X | | | | | X | X | |
+| **Entidad:** Habitación | | X | X | X | | | | | | X | | | X | | | X |
+| **Entidad:** Reserva | X | X | X | X | X | | X | | | X | | X | X | | | |
+| **Entidad:** Servicio | | | | | | | | | | | | | X | | | |
+| **Entidad:** Incidencia | | | | | | | | X | X | X | X | | | | | |
+| **Entidad:** Valoración | | | | | X | X | X | | | | | | | | | |
+| **Asociación:** Usuario–Cliente | | | | | | | | | | | | | | | | |
+| **Asociación:** Usuario–Empleado | | | | | | | | | | | | | | | | |
+| **Asociación:** Cliente–Reserva | | | | | X | | | | | | | | | | | |
+| **Asociación:** Reserva–Habitación | | X | X | X | | | | | | X | | | X | | | |
+| **Asociación:** Reserva–Servicio | | | | | | | | | | | | | X | | | |
+| **Asociación:** Habitación–Incidencia | | | | | | | | | | X | | | | | | |
+| **Asociación:** Incidencia–Empleado | | | | | | | | X | X | | | | | | | |
+| **Asociación:** Reserva–Valoración | | | | | X | | X | | | | | | | | | |
 
 
 -- fin entregable 2 --

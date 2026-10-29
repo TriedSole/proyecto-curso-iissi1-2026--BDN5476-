@@ -331,11 +331,6 @@ para compartir mi opinión sobre mi estancia en el hotel.
 
 #### 4.1.1. Requisitos de información
 
-| Nombre | Edad | Ciudad  |
-|--------|------|---------|
-| Ana    | 28   | Sevilla |
-| Luis   | 34   | Madrid  |
-
 ##### R.I.01. Información de los usuarios
 
 Como administrador,
@@ -789,15 +784,41 @@ para realizar mis tareas desde el primer día
 
 - Matriz de trazabilidad entre los elementos del modelo conceptual y los requisitos.
 
-|       | EntidadX   | AsociaciónX  | RestricciónX  | Entidad2 ...   | 
-|:------|:-----------|:-----------|:-----------|:-----------|
-| RI-1  | X          | X          | X          | X          |
-| RI-2  |            | X          |            | X          |
-| RF-1  |            | X          |            | X          |
-| RF-2  | X          |            | X          | X          |
-| RN-1  |            | X          |            |            |
-| RN-2  | X          | X          | X          |            |
-| ...   |            |            |            |            |
+| | R.I.01 | R.I.02 | R.I.03 | R.I.04 | R.I.05 | R.I.06 | R.I.07 | R.I.08 |
+|---|---|---|---|---|---|---|---|
+| **Entidad:** Usuario | X | X | X | | | | | |
+| **Entidad:** Cliente | X | X | | | X | | | |
+| **Entidad:** Empleado | X | | X | | | | X | |
+| **Entidad:** Habitación | | | | X | X | | X | |
+| **Entidad:** Reserva | | X | | X | X | X | | X |
+| **Entidad:** Servicio | | | | | X | X | | |
+| **Entidad:** Incidencia | | | | X | | | X | |
+| **Entidad:** Valoración | | | | | | | | X |
+| **Asociación:** Usuario–Cliente | X | X | | | | | | |
+| **Asociación:** Usuario–Empleado | X | | X | | | | | |
+| **Asociación:** Cliente–Reserva | | X | | | X | | | |
+| **Asociación:** Reserva–Habitación | | | | X | X | | | |
+| **Asociación:** Reserva–Servicio | | | | | X | X | | |
+| **Asociación:** Habitación–Incidencia | | | | X | | | X | |
+| **Asociación:** Incidencia–Empleado | | | | | | | X | |
+| **Asociación:** Reserva–Valoración | | | | | | | | X |
+| **Restricción:** RN-01 | | | | | X | | | |
+| **Restricción:** RN-02 | | | | | X | | | |
+| **Restricción:** RN-03 | | | | | X | | | |
+| **Restricción:** RN-05 | | | | | | | | X |
+| **Restricción:** RN-06 | | | | | | | | X |
+| **Restricción:** RN-07 | | | | | | | | X |
+| **Restricción:** RN-08 | | | | | | | X | |
+| **Restricción:** RN-11 | | | | | | | X | |
+| **Restricción:** RN-12 | | | | | X | | | |
+| **Restricción:** RN-13 | | | | | X | X | | |
+| **Restricción:** RN-14 | | | X | | | | | |
+| **Restricción:** RN-15 | | | X | | | | | |
+| **Restricción:** RN-16 | | | | X | | | | |
+
+
+
+
 
 -- fin entregable 2 --
 

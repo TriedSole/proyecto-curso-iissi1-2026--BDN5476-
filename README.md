@@ -752,11 +752,94 @@ para realizar mis tareas desde el primer día
 
 ### 5.1. Diagramas de clases UML
 
-- con restricciones.
+Aqui se presenta el diagrama de clases:
+
+![Diagrama de clases UML](img/DiagramaUML.drawio.png)
+
 
 ### 5.2. Escenarios de prueba
 
-- con descripción textual y diagrama de objetos UML.
+**ESCENARIO DE PRUEBA EP-01: Reserva válida con servicio y valoración**
+
+Objetivo: Comprobar que un cliente mayor de edad puede reservar una habitación dentro de su capacidad, contratar un servicio, y que una vez finalizada la reserva puede registrar una valoración, con el precio total calculado correctamente.
+
+Descripción textual: Bruno Artigas (nacido en 1990) reserva la habitación 101, de capacidad 2 y 80 € la noche, del 10/10/2026 al 13/10/2026 para 2 huéspedes. Contrata el servicio “Desayuno” por valor de 15€. La reserva pasa por pendiente, confirmada y finalizada, y después Bruno registra una valoración de 4,5. El precio total es 80 × 3 + 15 = 255 €.
+
+Reglas de negocio aplicadas: RN01, RN03, RN05, RN06, RN07, RN12, RN13, RN17.
+
+Objetos involucrados:
+
+`u1.Cliente` (nombre="Bruno", apellido="Artigas", dni="20131126V", fechaNacimiento=12/05/1990, correoElectronico="brunoartigas@gmail.com",
+numeroTelefono=679523653, contraseña="jupiter1909", nacionalidad="Española")\
+`h1.Habitación` (número=101, tipo=doble, capacidad=2, precio=80, estado=disponible)\
+`s1.Servicio` (nombre="Desayuno", descripcion="Desayuno buffet", precio=15)\
+`r1.Reserva` (fechaEntrada=10/10/2026, fechaSalida=13/10/2026, númeroHuéspedes=2, estadoReserva=finalizada, precioTotal=255)\
+`v1.Valoración` (puntuación=4.5, descripcion="Muy buena estancia", fechaValoración=14/10/2026)
+
+![Diagrama de objetos EP-01](img/EP-01.drawio.png)
+
+
+**ESCENARIO DE PRUEBA EP-02: Disponibilidad de habitaciones**
+
+Objetivo: Comprobar que el sistema rechaza reservas que se solapan con otra, que usan una habitación en mantenimiento o que usan una habitación con una incidencia sin resolver, y que acepta una reserva que empieza el mismo día en que otra termina.
+
+Descripción textual: El hotel tiene tres habitaciones: la 101 (disponible), la 102 (en mantenimiento) y la 103 (disponible, pero con una incidencia pendiente). La 101 tiene una reserva confirmada de Carlos del 10/10 al 15/10. Se prueban cuatro intentos de reserva y solo se acepta el que empieza el 15/10 (la salida es a las 12:00 y la entrada a las 14:00).
+
+Reglas de negocio aplicadas: RN02, RN04, RN10.
+
+Objetos involucrados:
+
+`u1.Cliente` (nombre="Carlos", apellido="Pérez", dni="67485926L", fechaNacimiento=20/08/1985)\
+`u2.Cliente` (nombre="Ana", apellido="Soto", dni="82036471M", fechaNacimiento=14/02/1992)\
+`h1.Habitación` (número=101, tipo=doble, capacidad=2, precio=80, estado=disponible)\
+`h2.Habitación` (número=102, tipo=doble, capacidad=2, precio=80, estado=mantenimiento)\
+`h3.Habitación` (número=103, tipo=doble, capacidad=2, precio=80, estado=disponible)\
+`i1.Incidencia` (fecha=08/10/2026, descripcion="Fuga en el baño", estadoIncidencia=pendiente, prioridad=alta, tipoIncidencia=desperfectoInmueble)\
+`r1.Reserva` (fechaEntrada=10/10/2026, fechaSalida=15/10/2026, númeroHuéspedes=2, estadoReserva=confirmada)\
+`r2.Reserva` (fechaEntrada=15/10/2026, fechaSalida=18/10/2026, númeroHuéspedes=1, estadoReserva=pendiente)
+
+
+
+| Intento | Resultado esperado | Motivo |
+|---|---|---|
+| Habitación 101, del 12/10 al 14/10 | Rechazado | Se solapa con r1 (RN02) |
+| Habitación 101, del 15/10 al 18/10 | Aceptado (es r2) | Empieza el día en que termina r1 |
+| Habitación 102 | Rechazado | En mantenimiento (RN04) |
+| Habitación 103 | Rechazado | Incidencia pendiente (RN10) |
+
+![Diagrama de objetos EP-02](img/EP-02.drawio.png)
+
+
+**ESCENARIO DE PRUEBA EP-03: Gestión de incidencias y empleados**
+
+Objetivo: Comprobar que las incidencias solo se asignan a empleados y no pueden asignarse una vez resueltas, que una incidencia pendiente puede quedar sin asignar, y que no puede haber dos empleados con el mismo NSS.
+
+Descripción textual: Marta García es a la vez clienta y empleada (recepcionista), Pedro Porro es empleado de mantenimiento y Laura Lebrel es solo clienta. En la habitación 104 hay tres incidencias: una pendiente sin asignar, una en curso asignada a Pedro y una resuelta. Se prueban varias asignaciones y altas, y solo se aceptan las válidas.
+
+Reglas de negocio aplicadas: RN08, RN09, RN11, RN14.
+
+Objetos involucrados:
+
+`u1.Cliente/Empleado`(nombre="Marta", apellido="García", dni="23456789B", fechaNacimiento=03/03/1995, nss="281234567890", puesto=recepcionista, salario=1500)\
+`u2.Empleado`(nombre="Pedro", apellido="Porro", dni="87149586S", nss="285496387412", puesto=mantenimiento, salario=1600)\
+`u3.Cliente`(nombre="Laura", apellido="Lebrel", dni="74581469L", fechaNacimiento=22/12/1966)\
+`h1.Habitación`(número=104, tipo=triple, capacidad=3, precio=95, estado=disponible)\
+`i1.Incidencia`(fecha=01/10/2026, descripcion="Cama sin hacer", estadoIncidencia=pendiente, prioridad=baja, tipoIncidencia=necesitaLimpieza)\
+`i2.Incidencia`(fecha=02/10/2026, descripcion="Enchufe sin corriente", estadoIncidencia=enCurso, prioridad=media, tipoIncidencia=desperfectoElectricidad)\
+`i3.Incidencia`(fecha=28/09/2026, descripcion="Hormigas en la terraza", estadoIncidencia=resuelta, prioridad=alta, tipoIncidencia=plagas)\
+
+
+|Intento | Resultado esperado |	Motivo |
+|---|---|---|
+|Registrar i1 pendiente sin empleado	|Aceptado 	|RN08|
+|Asignar i2 (en curso) a Pedro 	|Aceptado 	|RN08, RN09|
+|Asignar i3 (resuelta) a Pedro 	|Rechazado 	|RN09|
+|Asignar i1 a Laura (solo clienta)	|Rechazado 	|RN08|
+|Crear empleado con NSS 281234567890	|Rechazado	|RN14|
+|Crear incidencia con prioridad “urgente”	|Rechazado 	|RN11|
+
+![Diagrama de objetos EP-03](img/EP-03.drawio.png)
+
 
 ## 6. Matrices de trazabilidad
 
@@ -840,7 +923,6 @@ para realizar mis tareas desde el primer día
 | **R** Restricción de puntuación de la valoración: mínimo 1, máximo 5 y un decimal | | | | | | | | | X | | | | | |
 
 
--- fin entregable 2 --
 
 ## 7. Modelo relacional en 3FN
 

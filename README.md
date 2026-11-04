@@ -872,30 +872,30 @@ Objetos involucrados:
 
 
 
-| | RN-01 | RN-02 | RN-03 | RN-04 | RN-05 | RN-06 | RN-07 | RN-08 | RN-09 | RN-10 | RN-11 | RN-12 | RN-13 | RN-14 | RN-15 | RN-16 |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| **E** Usuario | | | | | | | | | | | | | | | | |
-| **E** Cliente | | | | | X | | | | | | | | | | | |
-| **E** Empleado | | | | | | | | X | X | | | | | X | X | |
-| **E** Habitación | | X | X | X | | | | | | X | | | X | | | X |
-| **E** Reserva | X | X | X | X | X | | X | | | X | | X | X | | | |
-| **E** Servicio | | | | | | | | | | | | | X | | | |
-| **E** Incidencia | | | | | | | | X | X | X | X | | | | | |
-| **E** Valoración | | | | | X | X | X | | | | | | | | | |
-| **A** Cliente – Usuario (perteneceA) | | | | | | | | | | | | | | | | |
-| **A** Cliente – Reserva (realiza) | | | | | X | | | | | | | | | | | |
-| **A** Reserva – Habitación (asignación)n | | X | X | X | | | | | | X | | | X | | | |
-| **A** Reserva – Servicio (contrata) | | | | | | | | | | | | | X | | | |
-| **A** Incidencia – Habitación (afecta) | | | | | | | | | | X | | | | | | |
-| **A** Incidencia – Empleado (atiende) | | | | | | | | X | X | | | | | | | |
-| **A** Reserva – Valoración (asociada a) | | | | | X | | X | | | | | | | | | |
-| **R** RN-01: Fechas y horarios de entrada y salida | X | | | | | | | | | | | | | | | | |
-| **R** RN-03: Número de huéspedes entre 1 y la capacidad de la habitación | | | X | | | | | | | | | | | | | | |
-| **R** RN-13: Cálculo del precio total de la reserva | | | | | | | | | | | | | X | | | | |
-| **R** RN-14: NSS único para cada empleado | | | | | | | | | | | | | | X | | | |
-| **R** RN-16: Número único para cada habitación | | | | | | | | | | | | | | | | X | |
-| **R** RN-17: Edad mínima de 18 años para reservar | | | | | | | | | | | | | | | | | X |
-| **R** Restricción de puntuación de la valoración: mínimo 1, máximo 5 y un decimal | | | | | | X | | | | | | | | | | | |
+| | RN-01 | RN-02 | RN-03 | RN-04 | RN-05 | RN-06 | RN-07 | RN-08 | RN-09 | RN-10 | RN-11 | RN-12 | RN-13 | RN-14 | RN-15 | RN-16 | RN-17 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| **E** Usuario | | | | | | | | | | | | | | | | | 
+| **E** Cliente | | | | | X | | | | | | | | | | | | 
+| **E** Empleado | | | | | | | | X | X | | | | | X | X | | 
+| **E** Habitación | | X | X | X | | | | | | X | | | X | | | X | 
+| **E** Reserva | X | X | X | X | X | | X | | | X | | X | X | | | | 
+| **E** Servicio | | | | | | | | | | | | | X | | | | 
+| **E** Incidencia | | | | | | | | X | X | X | X | | | | | | 
+| **E** Valoración | | | | | X | X | X | | | | | | | | | | 
+| **A** Cliente – Usuario (perteneceA) | | | | | | | | | | | | | | | | | 
+| **A** Cliente – Reserva (realiza) | | | | | X | | | | | | | | | | | | 
+| **A** Reserva – Habitación (asignación)n | | X | X | X | | | | | | X | | | X | | | | 
+| **A** Reserva – Servicio (contrata) | | | | | | | | | | | | | X | | | | 
+| **A** Incidencia – Habitación (afecta) | | | | | | | | | | X | | | | | | | 
+| **A** Incidencia – Empleado (atiende) | | | | | | | | X | X | | | | | | | | 
+| **A** Reserva – Valoración (asociada a) | | | | | X | | X | | | | | | | | | | 
+| **R** RN-01: Fechas y horarios de entrada y salida | X | | | | | | | | | | | | | | | | | 
+| **R** RN-03: Número de huéspedes entre 1 y la capacidad de la habitación | | | X | | | | | | | | | | | | | | | 
+| **R** RN-13: Cálculo del precio total de la reserva | | | | | | | | | | | | | X | | | | | 
+| **R** RN-14: NSS único para cada empleado | | | | | | | | | | | | | | X | | | | 
+| **R** RN-16: Número único para cada habitación | | | | | | | | | | | | | | | | X | | 
+| **R** RN-17: Edad mínima de 18 años para reservar | | | | | | | | | | | | | | | | | X | 
+| **R** Restricción de puntuación de la valoración: mínimo 1, máximo 5 y un decimal | | | | | | X | | | | | | | | | | | | 
 
 | | RF-01 | RF-02 | RF-03 | RF-04 | RF-05 | RF-06 | RF-07 | RF-08 | RF-09 | RF-10 | RF-11 | RF-12 | RF-13 | RF-14 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|

@@ -21,7 +21,8 @@ Nuestras expectativas de cara al fin del proyecto es haber logrado la creación 
 ## 2. Glosario de términos
 
 ### Administrador
-Usuario con acceso total a los datos del sistema. Puede consultar y gestionar usuarios, clientes, empleados, habitaciones, reservas, servicios, incidencias y valoraciones.
+Usuario responsable de supervisar el funcionamiento del hotel, con acceso total a los datos del sistema. Puede consultar y gestionar usuarios, clientes, empleados, habitaciones, reservas, servicios, incidencias y valoraciones.
+En particular, puede consultar las incidencias pendientes y en curso, las reservas asociadas a cada habitación, las valoraciones de los clientes, los datos personales de todos los usuarios y la información laboral de los empleados.
 
 ### Cliente
 Persona que puede realizar reservas de habitaciones, contratar servicios adicionales y realizar valoraciones sobre su estancia. Un cliente puede ser también empleado del hotel.
@@ -37,9 +38,6 @@ Situación en la que se encuentra una incidencia registrada en una habitación: 
 
 ### Estado de la reserva
 Situación en la que se encuentra una reserva: pendiente, confirmada, cancelada o finalizada.
-
-### Gerente
-Empleado responsable de supervisar el funcionamiento del hotel. Puede consultar las incidencias pendientes y en curso, las reservas de cada habitación, las valoraciones y la información laboral de los empleados.
 
 ### Habitación
 Unidad de alojamiento del hotel que puede ser reservada por un cliente. Cada habitación dispone de un número, una planta, un tipo, una capacidad y un precio, además de un estado que indica su situación actual.
@@ -66,7 +64,7 @@ Importe final de una reserva, calculado a partir del precio de la habitación du
 Nivel de urgencia de una incidencia: baja, media o alta.
 
 ### Puesto
-Cargo que desempeña un empleado: limpiador, recepcionista, mantenimiento, cocinero, botones, aparcador de coches o gerente.
+Cargo que desempeña un empleado: limpiador, recepcionista, mantenimiento, cocinero, botones, aparcador de coches.
 
 ### Reserva
 Registro mediante el cual un cliente, que pasa a ser su titular, solicita y obtiene la asignación de una habitación durante un periodo determinado. Incluye las fechas de entrada y salida, el número de huéspedes, su estado y el precio total. La entrada se realiza siempre a las 14:00 y la salida a las 12:00.
@@ -97,7 +95,7 @@ Motivo de la incidencia: necesita limpieza, plaga, daño de mobiliario, desperfe
 Persona con una cuenta en el sistema. Puede tener el papel de cliente, de empleado o de ambos a la vez, o ser administrador.
 
 ### Valoración
-Opinión que el titular de una reserva realiza sobre su experiencia asociada a ella. Incluye una puntuación de 0 a 5 con un máximo de un decimal, un comentario y la fecha en la que se realiza.
+Opinión que el titular de una reserva realiza sobre su experiencia asociada a ella. Incluye una puntuación de 1 a 5 con un máximo de un decimal, un comentario y la fecha en la que se realiza.
 
 
 ## 3. Visión general del sistema
@@ -105,9 +103,9 @@ Opinión que el titular de una reserva realiza sobre su experiencia asociada a e
 ### 3.1. Requisitos generales
 **RG1.** El cliente debe poder consultar sus reservas, incluyendo las fechas de entrada y salida (con la hora de entrada, 14:00, y la de salida, 12:00), la habitación asignada, el tipo de habitación, los servicios contratados y el precio total.
 
-**RG2.** El gerente debe poder consultar las habitaciones con incidencias, indicando si están pendientes, en curso o resueltas, y las reservas asociadas a cada habitación.
+**RG2.** El administrador debe poder consultar las habitaciones con incidencias, indicando si están pendientes, en curso o resueltas, y las reservas asociadas a cada habitación.
 
-**RG3.** Los clientes, los empleados autorizados y los administradores deben poder consultar las valoraciones de las estancias.
+**RG3.** Los clientes y los administradores deben poder consultar las valoraciones de las estancias.
 
 **RG4.** Los empleados del hotel deben poder consultar las incidencias, su prioridad y su estado.
 
@@ -127,13 +125,11 @@ Es la persona que utiliza la aplicación para consultar sus reservas, conocer lo
 
 Es la persona que trabaja en el hotel y utiliza la aplicación para realizar las tareas correspondientes a su puesto. Podrá consultar la información necesaria para desempeñar sus funciones, como las habitaciones, las reservas o las incidencias. Dependiendo de su puesto, tendrá permisos específicos dentro del sistema.
 
-Dentro de esta categoría se encuentra el gerente, que es el empleado responsable de supervisar el funcionamiento del hotel. Podrá consultar las incidencias pendientes y en curso, las reservas asociadas a las habitaciones, las valoraciones de los clientes y la información laboral de los empleados.
-
-Los puestos (limpiador, recepcionista, mantenimiento, cocinero, botones, aparcador de coches y gerente) son especializaciones de empleado. Cada requisito funcional indica el puesto que realiza la consulta. Las funcionalidades asociadas a un puesto concreto solo están disponibles para ese puesto y para el administrador.
+Los puestos (limpiador, recepcionista, mantenimiento, cocinero, botones, aparcador de coches ) son especializaciones de empleado. Cada requisito funcional indica el puesto que realiza la consulta. Las funcionalidades asociadas a un puesto concreto solo están disponibles para ese puesto y para el administrador.
 
 #### Administrador
 
-Es el usuario que dispone de acceso total a los datos del sistema. Podrá consultar y gestionar la información almacenada en la base de datos, incluyendo usuarios, clientes, empleados, habitaciones, reservas, servicios, incidencias y valoraciones.
+Es el usuario responsable de supervisar el funcionamiento del hotel y dispone de acceso total a los datos del sistema. Podrá consultar y gestionar la información almacenada en la base de datos, incluyendo usuarios, clientes, empleados, habitaciones, reservas, servicios, incidencias y valoraciones. Entre otras funciones, podrá consultar las incidencias pendientes y en curso, las reservas asociadas a cada habitación, las valoraciones de los clientes, los datos personales de todos los usuarios y la información laboral de los empleados.
 
 ##### Compatibilidad entre roles
 
@@ -156,7 +152,7 @@ para conocer las fechas, la habitación asignada, los servicios contratados y el
 #### R.F.02. Listado de habitaciones
 *Origen: RG2*
 
-Como empleado con puesto de recepción, limpieza, mantenimiento o gerente,
+Como empleado con puesto de recepción, limpieza, mantenimiento,
 quiero consultar el listado de habitaciones del hotel,
 para conocer sus características y su estado actual.
 
@@ -180,7 +176,7 @@ para informar a los clientes sobre las opciones de alojamiento.
 #### R.F.04. Listado de incidencias
 *Origen: RG4*
 
-Como empleado con puesto de recepción, limpieza, mantenimiento o gerente,
+Como empleado con puesto de recepción, limpieza, mantenimiento,
 quiero consultar las incidencias registradas en el hotel ordenadas por prioridad,
 para atender primero las más urgentes.
 
@@ -192,7 +188,7 @@ para atender primero las más urgentes.
 #### R.F.05. Consulta de incidencias pendientes y en curso
 *Origen: RG2*
 
-Como gerente,
+Como administrador,
 quiero consultar las incidencias pendientes y en curso,
 para supervisar los problemas que todavía no se han resuelto.
 
@@ -203,7 +199,7 @@ para supervisar los problemas que todavía no se han resuelto.
 #### R.F.06. Consulta de reservas de una habitación
 *Origen: RG2*
 
-Como gerente,
+Como administrador,
 quiero consultar las reservas asociadas a una habitación,
 para conocer su historial de ocupación.
 
@@ -225,19 +221,19 @@ para conocer sus características y precios antes de contratarlos.
 #### R.F.08. Consulta de empleados
 *Origen: RG6*
 
-Como gerente,
+Como administrador,
 quiero consultar el listado de empleados del hotel,
 para conocer su información laboral y el puesto que desempeñan.
 
 **Prueba de aceptación**
 - Comprobar que se muestran todos los empleados registrados en el sistema.
 - Comprobar que se visualizan el NSS, el puesto y el salario de cada empleado.
-- Comprobar que un empleado que no tiene el puesto de gerente, ni es administrador, no puede consultar el NSS ni el salario de otros empleados (R.N.15).
+- Comprobar que un usuario que no es administrador no puede consultar el NSS ni el salario de otros empleados (R.N.15).
 
 #### R.F.09. Consulta de valoraciones
 *Origen: RG3*
 
-Como gerente,
+Como administrador,
 quiero consultar las valoraciones realizadas por los clientes,
 para conocer su grado de satisfacción con las estancias en el hotel.
 
@@ -289,12 +285,12 @@ para gestionar la información de clientes y empleados.
 
 **Prueba de aceptación**
 - Comprobar que se muestran todos los usuarios registrados, con su rol (cliente, empleado o ambos).
-- Comprobar que un usuario sin rol de administrador, incluido el gerente, no puede acceder a este listado.
+- Comprobar que un usuario sin rol de administrador no puede acceder a este listado.
 
 #### R.F.14. Consulta de incidencias de una habitación
 *Origen: RG2*
 
-Como gerente,
+Como administrador,
 quiero consultar las incidencias de una habitación concreta, incluidas las resueltas,
 para conocer su historial de problemas.
 
@@ -302,32 +298,6 @@ para conocer su historial de problemas.
 - Comprobar que se muestran todas las incidencias de la habitación seleccionada, con estado pendiente, en curso o resuelta.
 - Comprobar que no se muestran incidencias de otras habitaciones.
 
-#### R.F.15. Contratación de servicios
-
-Como cliente,
-quiero contratar servicios adicionales para una de mis reservas,
-para personalizar mi estancia en el hotel.
-
-**Prueba de aceptación**
-
-- Comprobar que el cliente puede seleccionar un servicio del catálogo y asociarlo a una de sus reservas.
-- Comprobar que el servicio contratado queda registrado en la reserva.
-- Comprobar que el precio total de la reserva se actualiza teniendo en cuenta el servicio contratado.
-- Comprobar que un cliente no puede contratar servicios para una reserva de la que no es titular.
-
-#### R.F.16. Registro de valoraciones
-
-Como cliente,
-quiero registrar una valoración de una reserva finalizada de la que soy titular,
-para compartir mi opinión sobre mi estancia en el hotel.
-
-**Prueba de aceptación**
-
-- Comprobar que el titular puede registrar una valoración para una reserva finalizada.
-- Comprobar que la valoración guarda la puntuación, el comentario y la fecha.
-- Comprobar que no se permite registrar una valoración para una reserva que no esté finalizada.
-- Comprobar que no se permite registrar más de una valoración para la misma reserva.
-- Comprobar que no se permite registrar una puntuación fuera del intervalo de 0 a 5 o con decimales.
 
 #### 4.1.1. Requisitos de información
 
@@ -357,7 +327,7 @@ para relacionarlos con sus reservas y valoraciones.
 
 ##### R.I.03. Información de los empleados
 
-Como gerente,
+Como administrador,
 quiero almacenar la información laboral de los empleados,
 para conocer sus puestos y gestionar el personal del hotel.
 
@@ -365,7 +335,7 @@ para conocer sus puestos y gestionar el personal del hotel.
 - Comprobar que cada empleado está asociado a un usuario.
 - Comprobar que se almacena el NSS, puesto de trabajo y salario de cada empleado.
 - Comprobar que no existen dos empleados con el mismo NSS (R.N.14).
-- Comprobar que únicamente el gerente y el administrador pueden consultar el NSS y el salario (R.N.15).
+- Comprobar que únicamente el administrador puede consultar el NSS y el salario (R.N.15).
 
 ##### R.I.04. Información de las habitaciones
 
@@ -419,7 +389,7 @@ para conocer los problemas y facilitar su resolución.
 
 ##### R.I.08. Información de las valoraciones
 
-Como gerente,
+Como administrador,
 quiero almacenar las valoraciones realizadas por los clientes,
 para conocer su grado de satisfacción y mejorar los servicios del hotel.
 
@@ -427,7 +397,7 @@ para conocer su grado de satisfacción y mejorar los servicios del hotel.
 - Comprobar que cada valoración tiene un identificador único.
 - Comprobar que se almacena la puntuación, comentario y fecha de realización.
 - Comprobar que cada valoración está asociada a una reserva.
-- Comprobar que la puntuación está entre 0 y 5, con un máximo de un decimal (R.N.06).
+- Comprobar que la puntuación está entre 1 y 5, con un máximo de un decimal (R.N.06).
 - Comprobar que cada reserva finalizada puede tener como máximo una valoración realizada por su titular (R.N.05 y R.N.07).
 
 #### 4.1.2. Reglas de negocio
@@ -475,12 +445,13 @@ Una reserva podrá tener como máximo una valoración, y solo podrá realizarla 
 - Un cliente que no es el titular de la reserva intenta valorarla: se rechaza.
 
 #### R.N.06. Puntuación de una valoración
-La puntuación de una valoración deberá ser un número comprendido entre 0 y 5, ambos incluidos, con un máximo de un decimal.
+La puntuación de una valoración deberá ser un número comprendido entre 1 y 5, ambos incluidos, con un máximo de un decimal.
 
 **Prueba de aceptación**
-- Registrar valoraciones con puntuación 0, 3,5 y 5: se aceptan.
+- Registrar valoraciones con puntuación 1, 3,5 y 5: se aceptan.
 - Registrar una valoración con puntuación 4,25 (dos decimales): se rechaza.
-- Registrar una valoración con puntuación -0,5: se rechaza.
+- Registrar una valoración con puntuación 0: se rechaza.
+- Registrar una valoración con puntuación 0,5: se rechaza.
 - Registrar una valoración con puntuación 5,1: se rechaza.
 
 #### R.N.07. Valoración de una estancia
@@ -544,11 +515,11 @@ Dos empleados no podrán tener el mismo NSS.
 - Registrar un segundo empleado con un NSS ya existente: se rechaza.
 
 #### R.N.15. Acceso a la información laboral
-El NSS y el salario de un empleado solo podrán ser consultados por el gerente y por el administrador.
+El NSS y el salario de un empleado solo podrán ser consultados por el administrador.
 
 **Prueba de aceptación**
-- El gerente consulta el NSS y el salario de un empleado: se muestran.
-- Un empleado sin rol de gerente intenta consultar el salario de otro empleado: se deniega.
+- El administrador consulta el NSS y el salario de un empleado: se muestran.
+- Un empleado sin rol de administrador intenta consultar el salario de otro empleado: se deniega.
 - Un cliente intenta consultar datos laborales: se deniega.
 
 #### R.N.16. Número de habitación
@@ -596,7 +567,7 @@ quiero consultar mis reservas,
 para conocer las fechas, la habitación asignada, los servicios contratados y el precio total
 
 **R.F.02. Listado de habitaciones**
-Como empleado con puesto de recepción, limpieza, mantenimiento o gerente, 
+Como empleado con puesto de recepción, limpieza, mantenimiento, 
 quiero consultar el listado de habitaciones del hotel, 
 para conocer sus características y su estado actual
 
@@ -606,17 +577,17 @@ quiero consultar las habitaciones disponibles para un intervalo de fechas,
 para informar a los clientes sobre las opciones de alojamiento
 
 **R.F.04. Listado de incidencias**
-Como empleado con puesto de recepción, limpieza, mantenimiento o gerente, 
+Como empleado con puesto de recepción, limpieza, mantenimiento, 
 quiero consultar las incidencias registradas en el hotel ordenadas por prioridad,
 para atender primero las más urgentes
 
 **R.F.05. Consulta de incidencias pendientes y en curso**
-Como gerente, 
+Como administrador, 
 quiero consultar las incidencias pendientes y en curso, 
 para supervisar los problemas que todavía no se han resuelto
 
 **R.F.06. Consulta de reservas de una habitación**
-Como gerente, 
+Como administrador, 
 quiero consultar las reservas asociadas a una habitación, 
 para conocer su historial de ocupación
 
@@ -626,12 +597,12 @@ quiero consultar los servicios ofrecidos por el hotel,
 para conocer sus características y precios antes de contratarlos
 
 **R.F.08. Consulta de empleados**
-Como gerente, 
+Como administrador, 
 quiero consultar el listado de empleados del hotel, 
 para conocer su información laboral y el puesto que desempeñan
 
 **R.F.09. Consulta de valoraciones**
-Como gerente,
+Como administrador,
 quiero consultar las valoraciones realizadas por los clientes, 
 para conocer su grado de satisfacción con las estancias en el hotel.
 
@@ -656,7 +627,7 @@ quiero consultar los datos de todos los usuarios del sistema,
 para gestionar la información de clientes y empleados
 
 **R.F.14. Consulta de incidencias de una habitación**
-Como gerente,
+Como administrador,
 quiero consultar las incidencias de una habitación concreta, 
 incluidas las resueltas, para conocer su historial de problemas
 
@@ -744,7 +715,7 @@ quiero que mis datos personales solo puedan ser consultados por mí y por los us
 
 **R.N.F. 02. Confidencialidad de la información laboral**
 Como empleado del hotel
-quiero que mi NSS y mi salario solo puedan ser consultados por el gerente y el administrador
+quiero que mi NSS y mi salario solo puedan ser consultados por el administrador
 para que mi información laboral sea confidencial
 
 **R.N.F. 03. Autenticación**
@@ -844,24 +815,24 @@ para realizar mis tareas desde el primer día
 | **R.I.08** | | | | | X | X | X | | | | | | | | | |
 
 
-| | RF-01 | RF-02 | RF-03 | RF-04 | RF-05 | RF-06 | RF-07 | RF-08 | RF-09 | RF-10 | RF-11 | RF-12 | RF-13 | RF-14 | RF-15 | RF-16 |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| **Entidad:** Usuario | | | | | | | | | | | | | | | | |
-| **Entidad:** Cliente | | | | | X | | | | | | | | | | | |
-| **Entidad:** Empleado | | | | | | | | X | X | | | | | X | X | |
-| **Entidad:** Habitación | | X | X | X | | | | | | X | | | X | | | X |
-| **Entidad:** Reserva | X | X | X | X | X | | X | | | X | | X | X | | | |
-| **Entidad:** Servicio | | | | | | | | | | | | | X | | | |
-| **Entidad:** Incidencia | | | | | | | | X | X | X | X | | | | | |
-| **Entidad:** Valoración | | | | | X | X | X | | | | | | | | | |
-| **Asociación:** Usuario–Cliente | | | | | | | | | | | | | | | | |
-| **Asociación:** Usuario–Empleado | | | | | | | | | | | | | | | | |
-| **Asociación:** Cliente–Reserva | | | | | X | | | | | | | | | | | |
-| **Asociación:** Reserva–Habitación | | X | X | X | | | | | | X | | | X | | | |
-| **Asociación:** Reserva–Servicio | | | | | | | | | | | | | X | | | |
-| **Asociación:** Habitación–Incidencia | | | | | | | | | | X | | | | | | |
-| **Asociación:** Incidencia–Empleado | | | | | | | | X | X | | | | | | | |
-| **Asociación:** Reserva–Valoración | | | | | X | | X | | | | | | | | | |
+| | RF-01 | RF-02 | RF-03 | RF-04 | RF-05 | RF-06 | RF-07 | RF-08 | RF-09 | RF-10 | RF-11 | RF-12 | RF-13 | RF-14 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| **Entidad:** Usuario |  |  |  |  |  |  |  |  |  |  |  | X | X |  |
+| **Entidad:** Cliente | X |  |  |  |  |  |  |  |  |  |  | X | X |  |
+| **Entidad:** Empleado |  |  |  | X |  |  |  | X |  |  |  | X | X |  |
+| **Entidad:** Habitación | X | X | X | X | X | X |  |  |  | X |  |  |  | X |
+| **Entidad:** Reserva | X |  | X |  |  | X |  |  | X | X |  |  |  |  |
+| **Entidad:** Servicio | X |  |  |  |  |  | X |  |  |  |  |  |  |  |
+| **Entidad:** Incidencia |  |  | X | X | X |  |  |  |  |  |  |  |  | X |
+| **Entidad:** Valoración |  |  |  |  |  |  |  |  | X |  | X |  |  |  |
+| **Asociación:** Usuario–Cliente |  |  |  |  |  |  |  |  |  |  |  | X | X |  |
+| **Asociación:** Usuario–Empleado |  |  |  |  |  |  |  |  |  |  |  | X | X |  |
+| **Asociación:** Cliente–Reserva | X |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| **Asociación:** Reserva–Habitación | X |  | X |  |  | X |  |  |  | X |  |  |  |  |
+| **Asociación:** Reserva–Servicio | X |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| **Asociación:** Habitación–Incidencia |  |  | X | X | X |  |  |  |  |  |  |  |  | X |
+| **Asociación:** Incidencia–Empleado |  |  |  | X |  |  |  |  |  |  |  |  |  |  |
+| **Asociación:** Reserva–Valoración |  |  |  |  |  |  |  |  | X |  |  |  |  |  |
 
 
 -- fin entregable 2 --

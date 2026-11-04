@@ -40,7 +40,7 @@ Situación en la que se encuentra una incidencia registrada en una habitación: 
 Situación en la que se encuentra una reserva: pendiente, confirmada, cancelada o finalizada.
 
 ### Habitación
-Unidad de alojamiento del hotel que puede ser reservada por un cliente. Cada habitación dispone de un número, una planta, un tipo, una capacidad y un precio, además de un estado que indica su situación actual.
+Unidad de alojamiento del hotel que puede ser reservada por un cliente. Cada habitación dispone de un número, una planta (primer digito del número), un tipo, una capacidad y un precio, además de un estado que indica su situación actual.
 
 ### Incidencia
 Problema, avería o situación anómala detectada en una habitación que requiere una actuación por parte del personal del hotel. Tiene un tipo, una prioridad y un estado.
@@ -528,6 +528,13 @@ Cada habitación tendrá un número que la identifique y que no podrá repetirse
 **Prueba de aceptación**
 - Registrar la habitación 101 por primera vez: se acepta.
 - Registrar otra habitación con el número 101: se rechaza.
+
+### R.N.17. Edad mínima del titular de una reserva
+Solo podrá realizar una reserva un cliente que tenga al menos 18 años cumplidos en la fecha de entrada de la reserva. La edad se calcula a partir de la fecha de nacimiento del cliente.
+
+**Prueba de aceptación**
+- Un cliente de 17 años crea una reserva: se rechaza.
+- Un cliente de 45 años crea una reserva: se acepta.
 
 
 ### 4.2. Mapa de historias de usuario

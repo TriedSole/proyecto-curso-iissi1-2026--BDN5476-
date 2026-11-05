@@ -437,7 +437,7 @@ Una habitación que se encuentre en mantenimiento no podrá ser asignada a una n
 - Intentar reservar una habitación en estado "disponible" con fechas libres: se acepta.
 
 #### R.N.05. Valoración de una reserva
-Una reserva podrá tener como máximo una valoración, y solo podrá realizarla su titular.
+Una reserva podrá tener como máximo una valoración, y solo podrá realizarla su titular cuando su estado sea "finalizada".
 
 **Prueba de aceptación**
 - El titular de una reserva finalizada sin valoración registra una valoración: se acepta.
@@ -453,11 +453,6 @@ La puntuación de una valoración deberá ser un número comprendido entre 1 y 5
 - Registrar una valoración con puntuación 0: se rechaza.
 - Registrar una valoración con puntuación 0,5: se rechaza.
 - Registrar una valoración con puntuación 5,1: se rechaza.
-
-#### R.N.07. Valoración de una estancia
-Una valoración solo podrá realizarse cuando la reserva correspondiente esté en estado "finalizada".
-
-**Prueba de aceptación**
 - Valorar una reserva "finalizada": se acepta.
 - Valorar una reserva "pendiente", "confirmada" o "cancelada": se rechaza.
 
@@ -864,11 +859,11 @@ Objetos involucrados:
 | **A** Reserva – Valoración (asociada a) | | | | | | | X | |
 | **R** RN-01: Fechas y horarios de entrada y salida | | | | | X | | | |
 | **R** RN-03: Número de huéspedes entre 1 y la capacidad de la habitación | | | | X | X | | | |
+| **R** RN-06: Restricción de puntuación de la valoración: mínimo 1, máximo 5 y un decimal | | | | | | | | | X | | | | | |
 | **R** RN-13: Cálculo del precio total de la reserva | | | | | X | X | | |
 | **R** RN-14: NSS único para cada empleado | | | X | | | | | |
 | **R** RN-16: Número único para cada habitación | | | | X | | | | |
 | **R** RN-17: Edad mínima de 18 años para reservar | X | X | | | | | | |
-| **R** Restricción de puntuación de la valoración: mínimo 1, máximo 5 y un decimal | | | | | | | | X |
 
 
 
@@ -891,11 +886,11 @@ Objetos involucrados:
 | **A** Reserva – Valoración (asociada a) | | | | | X | | X | | | | | | | | | | 
 | **R** RN-01: Fechas y horarios de entrada y salida | X | | | | | | | | | | | | | | | | | 
 | **R** RN-03: Número de huéspedes entre 1 y la capacidad de la habitación | | | X | | | | | | | | | | | | | | | 
+| **R** RN-06: Restricción de puntuación de la valoración: mínimo 1, máximo 5 y un decimal | | | | | | | | | X | | | | | |
 | **R** RN-13: Cálculo del precio total de la reserva | | | | | | | | | | | | | X | | | | | 
 | **R** RN-14: NSS único para cada empleado | | | | | | | | | | | | | | X | | | | 
 | **R** RN-16: Número único para cada habitación | | | | | | | | | | | | | | | | X | | 
 | **R** RN-17: Edad mínima de 18 años para reservar | | | | | | | | | | | | | | | | | X | 
-| **R** Restricción de puntuación de la valoración: mínimo 1, máximo 5 y un decimal | | | | | | X | | | | | | | | | | | | 
 
 | | RF-01 | RF-02 | RF-03 | RF-04 | RF-05 | RF-06 | RF-07 | RF-08 | RF-09 | RF-10 | RF-11 | RF-12 | RF-13 | RF-14 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -916,11 +911,12 @@ Objetos involucrados:
 | **A** Reserva – Valoración (asociada a) |  |  |  |  |  |  |  |  | X |  |  |  |  |  |
 | **R** RN-01: Fechas y horarios de entrada y salida. | X | | | | | | | | | | | | | |
 | **R** RN-03: Número de huéspedes entre 1 y la capacidad de la habitación | | | X | | | | | | | | | | | |
+| **R** RN-06: Restricción de puntuación de la valoración: mínimo 1, máximo 5 y un decimal | | | | | | | | | X | | | | | |
 | **R** RN-13: Cálculo del precio total de la reserva | X | | | | | | | | | | | | | |
 | **R** RN-14: NSS único para cada empleado | | | | | | | | X | | | | | | |
 | **R** RN-16: Número único para cada habitación | | | | | | X | | | | | | | | |
 | **R** RN-17: Edad mínima de 18 años para reservar | | | | | | | | | | | | | | |
-| **R** Restricción de puntuación de la valoración: mínimo 1, máximo 5 y un decimal | | | | | | | | | X | | | | | |
+
 
 
 
